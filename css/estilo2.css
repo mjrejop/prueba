@@ -1,0 +1,225 @@
+*{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+@keyframes intro {
+  0% { opacity: 1;background: #e5e4e3; }
+  80% { opacity: 1;background: #3c7c9e;}
+  90%{ opacity: 1;background: #e5e4e3;}
+  100% { opacity: 0; visibility: hidden;}
+}
+.intro{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #e5e4e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: intro 1.5s ease forwards;
+    z-index: 10;
+}
+@keyframes introtexto {
+  0% { transform: rotateZ(30deg) ;opacity: 1;color: #1d5b91; }
+  80% { opacity: 1;color: #d8a32c;}
+  90%{ opacity: 1;color: #1d5b91;}
+  100% { opacity: 0; visibility: hidden;}
+}
+.intro h1{
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    animation: introtexto 1.5s ease forwards;
+}
+body{
+    background-image: url(/img/office-820390_1920.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    
+}
+header{
+    background-color: #1d5b91;
+    padding: 20px;
+    width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;    
+}
+nav ul {
+    display: flex;
+    gap: 50px; 
+    list-style: none;
+    padding: 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;
+
+}
+.linea {
+    width: 100%;
+    height: 2px;
+    background-color: #f7c600;
+}
+@keyframes expandir {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+.enlace:hover .linea {
+    animation: expandir 0.3s forwards;
+}
+@keyframes desvanecertexto{
+    0%{color: #ffffff;}
+    100%{color: #d8a32c;}
+}
+nav ul li a:hover{
+    animation: desvanecertexto 0.5s forwards;
+}
+nav ul .enlace{
+    margin-top: 8px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+}
+.datos{
+    flex-direction: column;
+    background-color: #e5e4e3ef;
+    justify-items: center;
+    text-align: center;
+    padding: 50px;
+    width: 500px;
+    height: 1100px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px #192229;
+}
+.datos input{
+    display: flex;
+    margin-bottom: 40px;
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
+}
+.datos select{
+    display: flex;
+    margin-bottom: 40px;
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.coloca{
+    font-size: 20px;
+    font-family: "Playwrite AU QLD", cursive;
+}
+.d{
+    font-size: 50px;
+    margin-bottom: 40px;
+    font-family: "Fugaz One", sans-serif;
+    animation: textocolor 3s infinite alternate;
+}    
+@keyframes textocolor{
+    0%{color: #d8a32c;}
+    50%{color: #d86b2c;}
+    100%{color: #d8462c;}
+}
+.datos p{
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: "Playwrite AU QLD", cursive;
+}
+button{
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: #1d5b91;
+    color: white;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #e5e4e3;
+  color: #133757;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  z-index: 2;
+}
+@media (max-width: 320px) {
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        background-image: url(/img/descargar\ \(6\).jpg);
+        background-size: cover;
+    }
+    .intro{
+        position: absolute;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        
+    }
+    .datos{
+        flex-direction: column;
+        background-color: #e5e4e3ef;
+        justify-items: center;
+        text-align: center;
+        padding: 50px;
+        width: 300px;
+        height: 1150px;
+        border-radius: 50px;
+        box-shadow: 10px 10px 10px #192229;
+    }
+    .datos input{
+        display: flex;
+        margin-bottom: 40px;
+        width: 250px;
+        height: 50px;
+        border-radius: 20px;
+        border: none;
+        padding: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        background-color: rgb(255, 255, 255);
+    }
+    .datos select{
+        display: flex;
+        margin-bottom: 40px;
+        width: 250px;
+        height: 50px;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    .coloca{
+        font-size: 20px;
+        font-family: "Playwrite AU QLD", cursive;
+    }
+    .d{
+        font-size: 50px;
+        margin-bottom: 40px;
+        font-family: "Fugaz One", sans-serif;
+        animation: textocolor 3s infinite alternate;
+    }    
+}
